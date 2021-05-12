@@ -91,20 +91,12 @@ const json = {
 const App: React.FunctionComponent<WithStyles> = ({ classes }) => {
   const [model] = useState(FlexLayout.Model.fromJson(json));
 
-  const onDragEnd = (result: DropResult, provided: ResponderProvided): void => {
-    
-    console.log(result);
-    console.log(provided);
-
-    return;
-  }
-
   const factory = (node: TabNode) => {
     const component = node.getComponent();
     if (component === "floatable") {
       return <div>
         <div className={classes.document}>
-          <Tooltip title={`This is a sample tooltip.`} disableFocusListener={true} placement={`top-start`}>
+          <Tooltip PopperProps={{ popperOptions: { container: `document.body`} }} title={`This is a sample tooltip.`} disableFocusListener={true} placement={`top-start`}>
             <p>Hover over here..</p>
           </Tooltip>
         </div>
