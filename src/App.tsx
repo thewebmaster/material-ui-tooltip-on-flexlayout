@@ -3,7 +3,6 @@ import FlexLayout from "flexlayout-react";
 import './App.css';
 import 'flexlayout-react/style/gray.css'
 import TabNode from 'flexlayout-react/declarations/model/TabNode';
-import { DropResult, ResponderProvided } from 'react-beautiful-dnd';
 import { createStyles, withStyles, Theme, WithStyles } from '@material-ui/core/styles';
 import { Tooltip } from '@material-ui/core';
 
